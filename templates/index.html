@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Super Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>Super Calculator</h2>
+
+    <form method="POST">
+        <input name="expr" placeholder="Enter expression...">
+        
+        <select name="mode">
+            <option value="calc">Normal</option>
+            <option value="trig">Trig / Log / Exp</option>
+            <option value="derivative">Derivative (wrt x)</option>
+            <option value="equation">Solve Equation</option>
+            <option value="regression">Linear Regression</option>
+        </select>
+
+        <button>=</button>
+
+        <div class="output">{{ result }}</div>
+    </form>
+
+    <div class="help">
+        Examples:
+        <br> sin(pi/3)
+        <br> log(100,10)
+        <br> diff: x^3+5*x+1
+        <br> solve: x^3 - 6*x^2 + 11*x - 6
+        <br> regression: [(1,2),(2,3),(3,5)]
+    </div>
+</div>
+
+</body>
+</html>
